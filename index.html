@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>
+        Organiser
+    </title>
+</head>
+<body>
+<div class="input-container">
+    <input id="inputNom" placeholder="nom du module">
+    <button id="addTimer" onclick="createtimer()">
+        <svg pathPlusIcone viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#fff">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                              stroke-linejoin="round"></g><g
+                id="SVGRepo_iconCarrier"> <path class="pathPlusIcone" fill="#ffffff" fill-rule="evenodd"
+                                                d="M9 17a1 1 0 102 0v-6h6a1 1 0 100-2h-6V3a1 1 0 10-2 0v6H3a1 1 0 000 2h6v6z"></path> </g>
+        </svg>
+    </button>
+</div>
+<div class="big-container">
+    <div style="display: none" class="small-container">
+        <p onclick="nomModuleMax(this)" class="nom-module-edit" contenteditable="true">nom du module</p>
+        <p onclick="timerControl(this)" class="timer-content" contenteditable="true">00:00:00</p>
+        <button onclick="decrementer(this)">
+            <img class="fleche-down" src="media/img/flechedown.png">
+        </button>
+        <button onclick="incrementer(this)">
+            <img class="fleche-up" src="media/img/fleche.png">
+        </button>
+        <button onclick="time_start(this)">
+            <img class="playstop-icone" src="media/img/play.png">
+        </button>
+        <button onclick="deleteTimer(this)">
+            <span class="minus"></span>
+        </button>
+        <span class="temp-max">temp max</span>
+        <span class="nom-max">nom est long</span>
+    </div>
+</div>
+<div class="anonyme"></div>
+    <script src="script.js"></script>
+</body>
+</html>

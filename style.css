@@ -1,0 +1,266 @@
+*{
+    font-family: "nunito", sans-serif;
+}
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.input-container {
+    margin-top: 200px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#inputNom {
+    width: 250px;
+    height: 35px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding-left: 20px;
+    font-size: 1.2em;
+    color: white;
+}
+#inputNom:focus {
+    outline: none;
+}
+
+#addTimer {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#addTimer > svg {
+    width: 20px;
+}
+
+/* input done */
+
+.big-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 5px;
+}
+.small-container {
+    margin: 0;
+    box-sizing: content-box;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 25px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.57);
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+.small-container > p:not(:first-child) {
+    margin: 0;
+    font-size: 1.4em;
+    margin-right: 15px;
+    width:125px;
+    height: 30.50px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.22);
+    border-radius: 8px;
+    padding: 2px;
+}
+.nom-max{
+    font-size: 13px;
+    font-weight: bold;
+    width: 100px;
+    height: 20px;
+    background-color: #ffffff;
+    color: black;
+    position: absolute;
+    top: -7px;
+    right: 380px;
+    text-align: center;
+    border-radius: 5px;
+    opacity: 0;
+}
+.temp-max{
+    font-size: 13px;
+    font-weight: bold;
+    width: 70px;
+    height: 20px;
+    background-color: #ffffff;
+    color: black;
+    position: absolute;
+    top: -7px;
+    right: 200px;
+    text-align: center;
+    border-radius: 5px;
+    opacity: 0;
+}
+.animTemMax {
+    animation: animMaxtemp 2s ease-out forwards;
+}
+@keyframes animMaxtemp {
+    from{
+        opacity: 0;
+        transform: translateY(-15px);
+    }20% {
+    opacity: .9;
+    transform: translateY(0);
+         }85%{
+    opacity: .9;
+    transform: translateY(0);
+                   }
+    100%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+}
+
+
+
+
+.small-container > p:first-child {
+    margin: 0;
+    font-size: 1.4em;
+    width: 180px;
+}
+.small-container > p:first-child:focus {
+    outline: none;
+}
+
+.small-container > button {
+    width: 33px;
+    height: 33px;
+    border-radius: 17px;
+    border: 3px solid rgba(255, 255, 255, 0.63);
+    background-color: rgba(255, 255, 255, 0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.small-container > button:hover {
+    opacity: .8;
+}
+
+.small-container > button:last-child {
+    margin-right: 10px;
+}
+
+.fleche-up {
+    width: 15px;
+    height: 15px;
+}
+@keyframes animFlech {
+    0%{
+        tranform: translateY(0);
+    }
+    50%{
+        transform: translateY(-22px);
+    }
+    50.01%{
+        transform: translate(-22px,-22px);
+    }
+    50.02%
+    {
+        transform: translate(-22px,22px);
+    }
+    50.03%
+    {
+        transform: translate(0,22px);
+    }
+    100%
+    {
+        transform: translateY(0px);
+    }
+}
+
+
+.fleche-down {
+    width: 15px;
+    height: 15px;
+}
+@keyframes animFlech2 {
+    0%{
+        tranform: translateY(0);
+    }
+    50%{
+        transform: translateY(22px);
+    }
+    50.01%{
+        transform: translate(22px,22px);
+    }
+    50.02%
+    {
+        transform: translate(-22px,22px);
+    }
+    50.03%
+    {
+        transform: translateY(-22px);
+    }
+    100%
+    {
+        transform: translateY(0);
+    }
+}
+
+.playstop-icone {
+    width: 12px;
+    padding: 1px 0 0 1px;
+}
+
+.minus {
+    width: 15px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    position: relative;
+}
+.minus:before {
+    content: "";
+    width: 15px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.anonyme {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .8;
+    z-index: -1;
+}
+
+
