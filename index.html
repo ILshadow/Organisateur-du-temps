@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="input-container">
-    <input id="inputNom" placeholder="nom du module">
+    <input id="inputNom" spellcheck="false" placeholder="nom du module">
     <button id="addTimer" onclick="createtimer()">
         <svg pathPlusIcone viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#fff">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
@@ -24,7 +24,7 @@
 <div class="big-container">
     <div style="display: none" class="small-container">
         <p onclick="nomModuleMax(this)" spellcheck="false" class="nom-module-edit" contenteditable="true">nom du module</p>
-        <p onclick="timerControl(this)" spellcheck="false" class="timer-content" contenteditable="true">00:00:00</p>
+        <p onclick="timerControl(this)" class="timer-content" contenteditable="true">00:00:00</p>
         <button onclick="decrementer(this)">
             <img class="fleche-down" src="media/img/flechedown.png">
         </button>
