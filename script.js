@@ -176,8 +176,21 @@ function decrementer(element , value = 1){
         buttons[0].style.backgroundColor = "rgba(255, 255, 255, 0.22)"
         buttons[2].style.backgroundColor = "rgba(255, 255, 255, 0.22)"
         downinterval = true;
+        if(value === 1000){
+            let duree = parent.children[1].textContent;
+            const audio = document.querySelector('#audioFinich');
+            if(duree === "00:00:00"){
+                audio.play();
+            }
+        }
     }
 }
+document.addEventListener('click', ()=>{
+    const audio = document.querySelector('#audioFinich');
+    audio.pause();
+    audio.currentTime = 0;
+})
+
 
 function time_start(element){
     const parent = element.parentElement;
